@@ -33,11 +33,11 @@ def main():
 
         if vis_type in ['map', 'm']:
 
-            # create an instance of the map
-            map = hexmap.Map(data)
+            # only use longitudes and latitudes as well as primary fur color
+            data_coord = data[['X', 'Y', 'Primary Fur Color']]
 
-            # run the map
-            map.run()
+            map = hexmap.Map(data_coord)
+            map.run(save_path=save_path)
 
         elif vis_type in ['radar', 'r']:
 
