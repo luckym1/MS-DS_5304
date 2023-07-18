@@ -1,5 +1,3 @@
 pandas
-altair == 4
-altair_viewer 
 matplotlib
-vega
+altair
