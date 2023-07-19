@@ -6,6 +6,9 @@ import numpy
 import altair as alt
 
 SAVE_PATH = pathlib.Path(__file__).parent.parent / 'output'
+if not SAVE_PATH.exists():
+    SAVE_PATH.mkdir()
+    
 DATA_PATH = pathlib.Path(__file__).parent.parent / 'data' / '2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv'
 
 def sub_plot_radar(data: pd.DataFrame, ax: numpy.ndarray, colors: dict, title: str, i: int) -> None:
